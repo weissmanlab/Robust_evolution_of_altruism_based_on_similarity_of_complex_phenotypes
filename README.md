@@ -1,4 +1,4 @@
-# Cooperation_by_Phenotypic_Similarity
+# Robust_evolution_of_altruism_based_on_similarity_of_complex_phenotypes
 Installations needed to compile and run the organized code: GNU Scientific Library, make. Recommended for parameter sweeps: GNU Parallel.
 
 How to compile code: Download all .c files, cooperation.h, and the Makefile. Some parameters are decided before compiling the code, others are accepted during execution by the command line. Pre-compiled parameters are listed at the top of the header file, and include number of generations, population size, phenotype dimension, and type of simulation (evolvable thresholds vs two fixed thresholds). Post-compilation parameters include selection strength, benefit, cost, phenotype mutation, strategy mutation rate, initial threshold or strict/generous thresholds, and iteration number. These parameters are input in sim_main.c. Once the pre-compiled parameters have been selected, use the command "make" to compile the code. The code will then be run with the command ./execute_sim followed by the desired values for the post-compiled parameter values, such as this: ./execute_sim 1 1 0.001 10 1 .5 2.5 1, to run the code with selection strength = 1, phenotype mutation = 1, strategy mutation rate = 0.001, benefit = 10, cost = 1, strict threshold = .5, generous threshold = 2.5, and iteration = 1.
@@ -19,5 +19,4 @@ parallel -a words.txt -a SELECTION_STRENGTH_vals.txt -a PHENOTYPE_MUTATION_vals.
 
 This is an example for running a simulation with two fixed thresholds, the generous and the strict thresholds, as seen in Figure 6 in the manuscript.
 
-Make sure execute_sim and all_permutations.txt are in the same folder, then have parallel run the cooperation code with all desired parameter combinations using command "parallel < all_permutations.txt"# Robust_evolution_of_altruism_based_on_similarity_of_complex_phenotypes
-# Robust_evolution_of_altruism_based_on_similarity_of_complex_phenotypes
+Make sure execute_sim and all_permutations.txt are in the same folder, then have parallel run the cooperation code with all desired parameter combinations using command "parallel < all_permutations.txt"
