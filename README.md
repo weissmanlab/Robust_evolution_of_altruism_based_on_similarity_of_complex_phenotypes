@@ -6,10 +6,10 @@ How to compile code: Download all .c files, cooperation.h, and the Makefile. Som
 How to parameter sweep with GNU Parallel:
 
 Open sweep_vals subdirectory. Enter desired values in respectively named .txt files separated by new lines, for example in INITIAL_THRESH_vals.txt, say I want to test the initial condition of thresholds 1, 4, 6.7, 3, the contents of the txt file would look like this:  
-1
-4
-6.7
-3 
+1<br />
+4<br />
+6.7<br />
+3<br />
 
 Exceptions are the ITERATION_vals.txt file and words.txt. In ITERATION, if you want just one copy, leave it as a single line with the entry 1. If you want 3 copies, then the values 1, 2, 3, each separated by a new line. words.txt contains the command to execute execute_sim, so should just be one line containing ./execute_sim.
 
